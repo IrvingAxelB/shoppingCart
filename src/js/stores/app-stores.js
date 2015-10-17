@@ -1,4 +1,4 @@
-var AppDispatcher = require('../dispatchers/app-dispatcher');
+var AppDispatcher = require('../dispatchers/app-dispatchers');
 var AppConstants = require('../constants/app-constants');
 
 var assign = require('react/lib/Object.assign');
@@ -15,8 +15,7 @@ for(var i = 1; i < 9; i++){
     'id': 'Widget' + i,
     'title': 'Widget #' + i,
     'summary': 'This is an awesome widget!',
-    'description': 'Lerem ipsum dolor sit ametconssectetur adipisicing elit.
-      Ducimus, commodi.',
+    'description': 'Lerem ipsum dolor sit ametconssectetur adipisicing elit.',
     'cost': i
   });
 }
@@ -47,8 +46,8 @@ function _addItem(item) {
     item['inCart'] = true;
     _cartItems.push(item);
   } else {
-    _cartItems.forEach( function() {
-      if(_cartItems.id === item.id){
+    _cartItems.forEach( function(cartItems, i) {
+      if(cartItems.id === item.id){
         _increaseItem(i);
       }
     });
