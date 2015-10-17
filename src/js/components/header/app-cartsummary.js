@@ -1,9 +1,14 @@
 var React = require('react');
+var Link = require('react-router-component').Link;
 
 var CartSummary = React.createClass({
   render: function() {
     return (
-      <div />
+      <div>
+        <Link href='/cart' className='btn btn-success'>
+          Cart Items: QTY / $COST
+        </Link>
+      </div>
     );
   }
 });
