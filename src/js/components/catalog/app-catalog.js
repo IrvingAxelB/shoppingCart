@@ -1,5 +1,5 @@
 var React = require('react');
-var AppStore = require('../stores/app-stores.js');
+var AppStore = require('../../stores/app-stores.js');
 var AddToCart = require('./app-addtocart.js');
 
 function getCatalog() {

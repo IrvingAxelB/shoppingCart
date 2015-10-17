@@ -16,7 +16,8 @@ for(var i = 1; i < 9; i++){
     'title': 'Widget #' + i,
     'summary': 'This is an awesome widget!',
     'description': 'Lerem ipsum dolor sit ametconssectetur adipisicing elit.',
-    'cost': i
+    'cost': i,
+    'img': './assets/product.png'
   });
 }
 

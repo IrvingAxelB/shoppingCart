@@ -1,5 +1,5 @@
 var React = require('react');
-var AppStore = require('../stores/app-stores.js');
+var AppStore = require('../../stores/app-stores.js');
 
 var RemoveFromCart = require('./app-removefromcart.js');
 var Increase = require('./app-decreaseitem');
@@ -18,7 +18,7 @@ var Cart = React.createClass({
   componentWillMount: function() {
     AppStore.addChangeListener(this._onChange)
   },
-  // set the _onChange 
+  // set the _onChange  : so if the state changes, it triggers within the listeners 
   _onChange: function() {
     this.setState(cartItems());
   },
